@@ -8,8 +8,8 @@ services:
       - "443:443"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      - ./traefik.yml:/traefik.yml:ro
-      - ./data/acme.json:/data/acme.json
+      - /usr/share/traefik/traefik.yml:/traefik.yml:ro
+      - /usr/share/traefik/data/acme.json:/data/acme.json
     networks:
       - traefik
     labels:
